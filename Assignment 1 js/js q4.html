@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>
+    function typeOfTriangle() {
+      var a, b, c;
+      a = parseInt(document.getElementById("inp1").value);
+      b = parseInt(document.getElementById("inp2").value);
+      c = parseInt(document.getElementById("inp3").value);
+      if (a == b && b == c && a == c) {
+        console.log("It is an Equilateral Triangle");
+      } else if (a == b || a == c || b == c) {
+        console.log("It is an Isosceles Triangle");
+      } else {
+        console.log("It is a Scalene Triangle");
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <p>Enter the sides of triangle :</p>
+  <input type="text" id="inp1" placeholder="side1" /><br /><br />
+  <input type="text" id="inp2" placeholder="side2" /><br /><br />
+  <input type="text" id="inp3" placeholder="side3" /><br /><br />
+  <button type="submit" onclick="typeOfTriangle()">Submit</button>
+  <p>See the console.</p>
+</body>
+
+</html>

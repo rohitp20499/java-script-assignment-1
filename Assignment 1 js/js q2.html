@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>
+    function vowel() {
+      var alphabet;
+      alphabet = document.getElementById("num").value;
+      switch (alphabet) {
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+        case 'A':
+        case 'E':
+        case 'I':
+        case 'O':
+        case 'U':
+          console.log("it is a vowel");
+          break;
+        default:
+          console.log("it is not a vowel");
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <input type="text" id="num" placeholder="Enter alphabet" />
+  <button onclick="vowel()">Submit</button>
+</body>
+
+</html>

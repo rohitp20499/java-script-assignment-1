@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>
+    function calculate() {
+      var noOfUnits = parseInt(document.getElementById("bill").value);
+      if (noOfUnits < 50) {
+        var bill = noOfUnits * 0.5;
+        console.log("Electricity bill is : " + bill + " Rs.");
+      } else if (noOfUnits > 50 && noOfUnits < 150) {
+        var sBill = (noOfUnits - 50) * 0.75;
+        var bill = sBill + (50 * 0.5);
+        console.log("Electricity bill is : " + bill + " Rs.");
+      } else if (noOfUnits > 150 && noOfUnits < 250) {
+        var sBill = (noOfUnits - 150) * 1.2;
+        var bill = sBill + (50 * 0.5) + (100 * 0.75);
+        console.log("Electricity bill is : " + bill + " Rs.");
+      } else if (noOfUnits > 250) {
+        var sBill = (noOfUnits - 250) * 1.5;
+        var bill = sBill + (50 * 0.5) + (100 * 0.75) + (100 * 1.2);
+        var surcharge = bill * 0.2;
+        console.log("Electricity bill is : " + (bill + surcharge) + " Rs.");
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <input type="text" id="bill" placeholder="No. of units" /><br /><br />
+  <button type="submit" onclick="calculate()">Submit</button>
+  <p>See the console.</p>
+</body>
+
+</html>
